@@ -1,5 +1,12 @@
 function TabButton(props) {
-  return <button onClick={props.onSelect}>{props.children}</button>;
+  return (
+    <button
+      className={props.isSelected ? 'active' : undefined}
+      onClick={props.onSelect}
+    >
+      {props.children}
+    </button>
+  );
 }
 
 export default TabButton;
